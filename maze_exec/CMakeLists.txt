@@ -8,12 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 file(GLOB_RECURSE MAZE_EXEC_HDRS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "include/*.hpp")
 file(GLOB_RECURSE MAZE_EXEC_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "lib/*.cpp")
 
-message(${MAZE_EXEC_HDRS})
-
 add_custom_target(copy_resources ALL
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     ${PROJECT_SOURCE_DIR}/data
-    ${PROJECT_BINARY_DIR}/data
+    ${CMAKE_CURRENT_BINARY_DIR}/data
     COMMENT "Copying shaders to binary directory"
 )
 
