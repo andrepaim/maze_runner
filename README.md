@@ -14,6 +14,11 @@ O seu programa deve terminar:
 
 Um esqueleto do código ilustrando as principais funções está disponível nesse repositório. Você não precisa seguir esse esqueleto, fique a vontade para modificá-lo.
 
+#### Teste geral de todos os caminhos fornecidos
+- Adicionar ```usleep(1000000);``` antes do ```return 0; ``` da main();
+- buildar
+- no diretório raiz rodar o comando : ``` ./build/maze_runner ./data/maze.txt; ./build/maze_runner ./data/maze2.txt; ./build/maze_runner ./data/maze3.txt; ./build/maze_runner ./data/maze4.txt; ./build/maze_runner ./data/maze5.txt; ./build/maze_runner ./data/maze6.txt; ./build/maze_runner ./data/maze7.txt; ```
+
 ### Exercício Computacional 2
 
 Neste exercício voces irao modificar o código gerado no exercício anterior de forma que, durante a exploração do labirinto, toda vez que seja encontrado mais de um possível caminho, a thread que está realizando a exploração, crie uma thread adicional para explorar cada um dos demais caminhos adicionais e  continue a explorar um destes.
