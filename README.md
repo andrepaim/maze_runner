@@ -15,7 +15,7 @@ O seu programa deve terminar:
 Um esqueleto do código ilustrando as principais funções está disponível nesse repositório. Você não precisa seguir esse esqueleto, fique a vontade para modificá-lo.
 
 #### Teste geral de todos os caminhos fornecidos
-- Adicionar ```usleep(1000000);``` antes do ```return 0; ``` da main();
+- Adicionar ```usleep(1000000);``` antes do ```return 0;``` da main();
 - buildar
 - no diretório raiz rodar o comando : ``` ./build/maze_runner ./data/maze.txt; ./build/maze_runner ./data/maze2.txt; ./build/maze_runner ./data/maze3.txt; ./build/maze_runner ./data/maze4.txt; ./build/maze_runner ./data/maze5.txt; ./build/maze_runner ./data/maze6.txt; ./build/maze_runner ./data/maze7.txt; ```
 
