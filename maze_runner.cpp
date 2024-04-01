@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include <stack>
 
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
+
+using std::fstream;
+using std::ofstream;
+using std::ifstream;
+using std::ios;
+using std::string;
+
+
+using namespace std;
+
 // Matriz de char representnado o labirinto
 char** maze; // Voce também pode representar o labirinto como um vetor de vetores de char (vector<vector<char>>)
 
@@ -101,11 +116,35 @@ bool walk(pos_t pos) {
 
 int main(int argc, char* argv[]) {
 	// carregar o labirinto com o nome do arquivo recebido como argumento
-	pos_t initial_pos = load_maze(argv[1]);
+	ifstream pos_t initial_pos = load_maze("maze.txt);
 	// chamar a função de navegação
 	bool exit_found = walk(initial_pos);
+
 	
+
+    // Verificando se o arquivo foi aberto corretamente
+    if (!initial_pos) {
+        cerr << "Erro ao abrir o arquivo." << endl;
+        return 1;
+    }
+
+    string linha;
+
+    // Lendo a linha do arquivo
+    if (getline(initial_pos, linha)) {
+        // Usando um stringstream para ler os valores da linha
+        stringstream ss(linha);
+
+        int valor1, valor2;
+
+        // Lendo os valores da linha
+        ss >> valor1 >> valor2;
+    }
+
+    else cout << "Unable to open file\n";
+    
+    myfile.close();
 	// Tratar o retorno (imprimir mensagem)
-	
-	return 0;
+
+   return 0;
 }
