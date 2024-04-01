@@ -12,39 +12,32 @@ using std::string;
 
 using namespace std;
 
-/*
-int main()
-{
-                  ifstream is;
-                  is.open ("texto.txt", ios::in);
-
-                  return 0;
-}
-
-std::ifstream file(str);
-      if( file.is_open() ){
-        std::getline(file, this->title);
-
-*/
-
-
 
 int main () {
     
     system("clear\n");
-
-    string line;
-    ifstream myfile ("maze.txt"); // ifstream = padrão ios:in
     
-    if (myfile.is_open()){
-        while (! myfile.eof() ) //enquanto end of file for false continua
-        {
-            getline (myfile,line); // como foi aberto em modo texto(padrão) //e não binário(ios::bin) pega cada linha
-            cout << line.size() << endl;
-            cout << line << endl;
-            
-        }
+    ifstream arquivo("maze.txt");
+
+    // Verificando se o arquivo foi aberto corretamente
+    if (!arquivo) {
+        cerr << "Erro ao abrir o arquivo." << endl;
+        return 1;
     }
+
+    string linha;
+
+    // Lendo a linha do arquivo
+    if (getline(arquivo, linha)) {
+        // Usando um stringstream para ler os valores da linha
+        stringstream ss(linha);
+
+        int valor1, valor2;
+
+        // Lendo os valores da linha
+        ss >> valor1 >> valor2;
+    }
+
     else cout << "Unable to open file\n";
     
     myfile.close();    
