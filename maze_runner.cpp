@@ -57,6 +57,9 @@ pos_t load_maze(const char* file_name) {
 	
 	char maze[][];
 
+	while ((caractere = fgetc(arquivo)) != EOF) {  // Lê um caractere por vez
+        std::cout << static_cast<char>(caractere);  // Imprimir o caractere lido
+    }
 	
 	
 		
